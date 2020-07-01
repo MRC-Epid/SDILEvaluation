@@ -53,26 +53,24 @@ SDIL <- SDIL[order(SDIL$SDIL2 %in% "Toiletries", decreasing=FALSE)]
 #ADD ORDER TERMS
 ###############################################################################
 # 
-# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2))) # NO
-# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3))) #YES  - BUT DON'T USE FOR CONSISTENCY WITH PREVIOUS ANALYSIS
-# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3) + I(AnnouncementIndicatorTrend^4))) #NO 
+# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2)))
+# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3)))
+# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3) + I(AnnouncementIndicatorTrend^4)))
+
+# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2)))
+# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3)))
+# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3)))
+# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3) + I(ImplementationIndicatorTrend^4)))
 # 
-# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2))) #YES
-# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3))) #YES
-# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3))) #YES
-# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3) + I(ImplementationIndicatorTrend^4))) #NO
 # 
-# 
-# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(ImplementationIndicatorTrend^2))) #NO
-# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3) #YES
+# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(ImplementationIndicatorTrend^2)))
+# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3)
 #                          + I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3)))
 # 
 # model_ols <- summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3)))
 # 
 # summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3) + I(AnnouncementIndicatorTrend^4) 
-#                          + I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3) + I(ImplementationIndicatorTrend^4))) #NO
-
-#LOOKS LIKE OVER FITTING
+#                          + I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3) + I(ImplementationIndicatorTrend^4)))
 
 ###############################################################################
 #UPDATE FORMULA
