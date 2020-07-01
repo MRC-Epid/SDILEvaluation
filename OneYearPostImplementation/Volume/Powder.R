@@ -53,23 +53,21 @@ SDIL <- SDIL[order(SDIL$SDIL2 %in% "Toiletries", decreasing=FALSE)]
 #ADD ORDER TERMS
 ###############################################################################
 
-# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2))) # NO
-# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3))) #NO
-# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3) + I(AnnouncementIndicatorTrend^4))) #NO
+# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2)))
+# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3)))
+# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3) + I(AnnouncementIndicatorTrend^4)))
 # 
-# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2))) #NO
-# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3))) #YES
-# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3) + I(ImplementationIndicatorTrend^4))) #NO
+# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2)))
+# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3)))
+# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3) + I(ImplementationIndicatorTrend^4)))
 # 
-# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(ImplementationIndicatorTrend^2))) #NO
-# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3) #NO
+# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(ImplementationIndicatorTrend^2)))
+# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3)
 #                          + I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3)))
 # summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3) + I(AnnouncementIndicatorTrend^4) 
-#                + I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3) + I(ImplementationIndicatorTrend^4))) #NO
+#                + I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3) + I(ImplementationIndicatorTrend^4)))
 # 
 # model_ols <- summary(update(model_ols, ~. +I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3)))
-
-#SEEMS TO SIMPLY ACCOUNT FOR THE SEASONAL VARIATION - NOT INCLUDED
 
 ###############################################################################
 #UPDATE FORMULA
