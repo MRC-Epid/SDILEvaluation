@@ -53,19 +53,19 @@ Model <- as.formula(volume ~ Time + SDILAnnouncement + SDILImplementation +
 #ADD ORDER TERMS - LOOKS LIKE OVER FITTING SO NO TERMS INCLUDED
 ###############################################################################
 # 
-# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2))) # NO
-# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3))) #NO
-# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3) + I(AnnouncementIndicatorTrend^4))) #YES - BUT DON'T USE FOR CONSISTENCY WITH PREVIOUS ANALYSIS
+# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2)))
+# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3)))
+# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3) + I(AnnouncementIndicatorTrend^4)))
 # 
-# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2))) #YES
-# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3))) #NO
-# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3) + I(ImplementationIndicatorTrend^4))) #YES
+# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2)))
+# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3)))
+# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3) + I(ImplementationIndicatorTrend^4)))
 # 
-# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(ImplementationIndicatorTrend^2))) #NO
-# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3) #YES
+# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(ImplementationIndicatorTrend^2)))
+# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3)
 #                          + I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3)))
 # summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3) + I(AnnouncementIndicatorTrend^4) 
-#                + I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3) + I(ImplementationIndicatorTrend^4))) #YES
+#                + I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3) + I(ImplementationIndicatorTrend^4)))
 
 ###############################################################################
 #REDUCED OLS MODEL
