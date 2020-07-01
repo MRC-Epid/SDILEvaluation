@@ -59,22 +59,19 @@ SDIL <- SDIL[order(SDIL$SDIL2 %in% "Toiletries", decreasing=FALSE)]
 #ADD ORDER TERMS
 ###############################################################################
 # 
-# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2))) # NO
-# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3))) #NO
-# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3) + I(AnnouncementIndicatorTrend^4))) #YES - BUT NOT CONSISTENT WITH PREVIOUS
+# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2)))
+# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3)))
+# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3) + I(AnnouncementIndicatorTrend^4)))
 # 
-# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2))) #NO
-# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3))) #YES
-# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3) + I(ImplementationIndicatorTrend^4))) #NO
+# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2)))
+# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3)))
+# summary(update(model_ols, ~.+ I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3) + I(ImplementationIndicatorTrend^4)))
 # 
-# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(ImplementationIndicatorTrend^2))) #NO
-# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3) #NO
+# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(ImplementationIndicatorTrend^2)))
+# summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3)
 #                          + I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3)))
 # summary(update(model_ols, ~.+ I(AnnouncementIndicatorTrend^2) + I(AnnouncementIndicatorTrend^3) + I(AnnouncementIndicatorTrend^4) 
-#                + I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3) + I(ImplementationIndicatorTrend^4))) #NO
-# 
-# THE EXCLUSION OF EXTRA TERMS RESULTS IN A MORE CONSERVATIVE GAP BETWEEN THE FINAL END POINT
-# AND THE COUNTERFACTUAL
+#                + I(ImplementationIndicatorTrend^2) + I(ImplementationIndicatorTrend^3) + I(ImplementationIndicatorTrend^4)))
 # 
 ###############################################################################
 #UPDATE FORMULA
